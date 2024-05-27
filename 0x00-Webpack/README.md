@@ -1,4 +1,5 @@
-# Webpack Project README
+![](webpack.png)
+# Webpack Project
 
 This repository contains a series of tasks aimed at learning and practicing setting up Webpack for JavaScript projects. Each task focuses on different aspects of Webpack configuration, including bundling JavaScript files, handling CSS and image assets, setting up development servers, and optimizing builds.
 
