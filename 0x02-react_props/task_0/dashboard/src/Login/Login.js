@@ -2,7 +2,7 @@ import React from "react";
 import "./Login.css";
 
 function Login() {
-  render(
+  return (
     <main className="App-body">
       <p>Login to access the full dashboard</p>
       <div>

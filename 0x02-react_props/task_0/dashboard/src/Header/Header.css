@@ -4,7 +4,7 @@
     margin-right: auto;
   }
 
-  .App-header {
+.App-header {
     background-color: white;
     min-height: 10vh;
     display: flex;
@@ -16,9 +16,10 @@
     position: relative;
   }
 
-  .App-header h1 {
+.App-header h1 {
     margin: 0;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
   }
+
