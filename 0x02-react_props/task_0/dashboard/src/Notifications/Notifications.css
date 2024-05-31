@@ -3,6 +3,7 @@
 .Notifications {
     border: 1px solid #ccc;
     padding: 10px;
+    list-style: none;
   }
 
 .Notifications ul li[data-priority="default"] {
