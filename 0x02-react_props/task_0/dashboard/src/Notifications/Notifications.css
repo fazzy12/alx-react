@@ -1,15 +1,15 @@
 /* Notifications.css */
 
-.Notifications {
+.NotificationItem {
     border: 1px solid #ccc;
     padding: 10px;
     list-style: none;
   }
 
-.Notifications ul li[data-priority="default"] {
-  color: blue;
+.NotificationItem.default {
+    color: blue;
 }
 
-.Notifications ul li[data-priority="urgent"] {
-  color: red;
+.NotificationItem.urgent {
+    color: red;
 }
