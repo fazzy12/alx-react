@@ -30,4 +30,25 @@ describe('App component', () => {
     const wrapper = shallow(<App />);
     expect(wrapper.find(Footer).length).toBe(1);
   });
+
+
+  test('menu item is displayed when displayDrawer is false', () => {
+    const { getByText } = render(<Notifications displayDrawer={false} />);
+    expect(getByText('Your notifications')).toBeInTheDocument();
+  });
+
+  test('div.Notifications is not displayed when displayDrawer is false', () => {
+    const { queryByText } = render(<Notifications displayDrawer={false} />);
+    expect(queryByText('Here is the list of notifications')).toBeNull();
+  });
+
+  test('menu item is displayed when displayDrawer is true', () => {
+    const { getByText } = render(<Notifications displayDrawer={true} />);
+    expect(getByText('Your notifications')).toBeInTheDocument();
+  });
+
+  test('div.Notifications is displayed when displayDrawer is true', () => {
+    const { getByText } = render(<Notifications displayDrawer={true} />);
+    expect(getByText('Here is the list of notifications')).toBeInTheDocument();
+  });
 });
