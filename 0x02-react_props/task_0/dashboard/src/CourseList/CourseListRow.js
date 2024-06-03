@@ -1,4 +1,4 @@
-// CourseListRow.js
+// src/CourseList/CourseListRow.js
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -27,12 +27,12 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
 CourseListRow.propTypes = {
   isHeader: PropTypes.bool,
   textFirstCell: PropTypes.string.isRequired,
-  textSecondCell: PropTypes.string
+  textSecondCell: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 CourseListRow.defaultProps = {
   isHeader: false,
-  textSecondCell: null
+  textSecondCell: null,
 };
 
 export default CourseListRow;
