@@ -1,0 +1,25 @@
+.App-logo {
+    height: 10vmin;
+    pointer-events: none;
+    margin-right: auto;
+  }
+
+.App-header {
+    background-color: white;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    font-size: calc(10px + 2vmin);
+    color: red;
+    position: relative;
+  }
+
+.App-header h1 {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
