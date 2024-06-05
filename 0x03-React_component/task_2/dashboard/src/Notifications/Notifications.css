@@ -1,0 +1,21 @@
+/* Notifications.css */
+.menuItem {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.Notifications {
+  border: 1px solid #ccc;
+  padding: 10px;
+  list-style: none;
+}
+
+.Notifications ul li[data-priority="default"] {
+  color: blue;
+}
+
+.Notifications ul li[data-priority="urgent"] {
+  color: red;
+}
