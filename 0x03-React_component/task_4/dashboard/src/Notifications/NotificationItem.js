@@ -6,9 +6,15 @@ class NotificationItem extends PureComponent {
     const { type, value, html, id, markAsRead } = this.props;
 
     if (html) {
-      return <li data-notification-type={type} dangerouslySetInnerHTML={html} onClick={() => markAsRead(id)}></li>;
+      return (
+        <li data-notification-type={type} dangerouslySetInnerHTML={html} onClick={() => markAsRead(id)}></li>
+      );
     }
-    return <li data-notification-type={type} onClick={() => markAsRead(id)}>{value}</li>;
+    return (
+      <li data-notification-type={type} onClick={() => markAsRead(id)}>
+        {value}
+      </li>
+    );
   }
 }
 
