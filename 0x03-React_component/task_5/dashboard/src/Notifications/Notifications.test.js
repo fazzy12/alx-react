@@ -61,4 +61,36 @@ describe('App component', () => {
 
     consoleSpy.mockRestore();
   });
+
+  it('should not rerender when updating the props with the same list', () => {
+    const listNotifications = [
+      { id: 1, type: 'default', value: 'New course available' },
+      { id: 2, type: 'urgent', value: 'New resume available' },
+    ];
+    const wrapper = shallow(<Notifications listNotifications={listNotifications} />);
+
+    expect(wrapper.find('NotificationItem').length).toBe(2);
+
+    wrapper.setProps({ listNotifications });
+
+    expect(wrapper.find('NotificationItem').length).toBe(2);
+  });
+
+  it('should rerender when updating the props with a longer list', () => {
+    const initialListNotifications = [
+      { id: 1, type: 'default', value: 'New course available' },
+      { id: 2, type: 'urgent', value: 'New resume available' },
+    ];
+    const newListNotifications = [
+      ...initialListNotifications,
+      { id: 3, type: 'urgent', value: 'Urgent requirement' },
+    ];
+    const wrapper = shallow(<Notifications listNotifications={initialListNotifications} />);
+
+    expect(wrapper.find('NotificationItem').length).toBe(2);
+
+    wrapper.setProps({ listNotifications: newListNotifications });
+
+    expect(wrapper.find('NotificationItem').length).toBe(3);
+  });
 });
