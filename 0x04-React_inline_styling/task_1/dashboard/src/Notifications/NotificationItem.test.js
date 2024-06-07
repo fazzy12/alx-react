@@ -3,6 +3,17 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import NotificationItem from './NotificationItem';
 
+import { StyleSheetTestUtils } from 'aphrodite';
+
+beforeEach(() => {
+  StyleSheetTestUtils.suppressStyleInjection();
+});
+
+afterEach(() => {
+  StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+});
+
+
 describe('NotificationItem component', () => {
   it('renders without crashing', () => {
     shallow(<NotificationItem type="default" value="test" />);

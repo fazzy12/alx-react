@@ -2,6 +2,17 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Header from '../Header/Header';
 
+import { StyleSheetTestUtils } from 'aphrodite';
+
+beforeEach(() => {
+  StyleSheetTestUtils.suppressStyleInjection();
+});
+
+afterEach(() => {
+  StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+});
+
+
 describe('Header component', () => {
   it('renders without crashing', () => {
     shallow(<Header />);
