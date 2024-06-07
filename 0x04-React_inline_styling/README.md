@@ -1,3 +1,5 @@
+![](stylebackground.jpg)
+
 # ALX React Inline Styling Project
 
 ## Overview
