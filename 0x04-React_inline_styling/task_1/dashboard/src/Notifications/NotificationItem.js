@@ -1,18 +1,28 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { StyleSheet, css } from 'aphrodite';
+
+const styles = StyleSheet.create({
+  defaultItem: {
+    color: 'blue',
+  },
+  urgentItem: {
+    color: 'red',
+  },
+});
 
 class NotificationItem extends PureComponent {
   render() {
     const { type, value, html, id, markAsRead } = this.props;
 
-    if (html) {
-      return (
-        <li data-notification-type={type} dangerouslySetInnerHTML={html} onClick={() => markAsRead(id)}></li>
-      );
-    }
     return (
-      <li data-notification-type={type} onClick={() => markAsRead(id)}>
-        {value}
+      <li
+        data-notification-type={type}
+        className={css(type === 'urgent' ? styles.urgentItem : styles.defaultItem)}
+        onClick={() => markAsRead(id)}
+        dangerouslySetInnerHTML={html}
+      >
+        {!html && value}
       </li>
     );
   }
