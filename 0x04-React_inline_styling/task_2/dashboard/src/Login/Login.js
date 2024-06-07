@@ -20,6 +20,11 @@ const styles = StyleSheet.create({
     borderRadius: '5px',
     cursor: 'pointer',
   },
+  '@media (max-width: 900px)': {
+    formGroup: {
+      display: 'block',
+    },
+  },
 });
 
 function Login() {

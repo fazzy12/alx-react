@@ -9,6 +9,11 @@ const styles = StyleSheet.create({
   urgentItem: {
     color: 'red',
   },
+  '@media (max-width: 900px)': {
+    item: {
+      width: '100%',
+    },
+  },
 });
 
 class NotificationItem extends PureComponent {
